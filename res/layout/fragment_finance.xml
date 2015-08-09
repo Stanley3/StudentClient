@@ -14,10 +14,10 @@
             android:id="@+id/bt_user_info"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="6dp"
+            android:layout_alignParentStart="true"
             android:layout_marginLeft="6dp"
+            android:layout_marginStart="6dp"
             android:layout_marginTop="9dp"
             android:background="@drawable/top_left_user_normal" />
 
@@ -40,7 +40,8 @@
         android:layout_margin="0dp"
         android:background="#ffffff"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone" >
 
         <Button
             android:id="@+id/bt_cost_log"
@@ -61,7 +62,6 @@
             android:text="@string/rechange_log"
             android:textColor="@color/bt_background_unselected"
             android:textSize="18sp" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -69,21 +69,22 @@
         android:layout_height="2dp"
         android:background="@color/bt_background_unselected"
         android:orientation="horizontal"
+        android:visibility="gone"
         android:weightSum="2" >
+
         <ImageView
             android:id="@+id/iv_line"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@color/bt_background_selected"
-            android:scaleType="matrix"
-            android:contentDescription="@string/underLine" />
+            android:contentDescription="@string/underLine"
+            android:scaleType="matrix" />
     </LinearLayout>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_finance"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        />
+        android:layout_height="fill_parent" />
 
 </LinearLayout>

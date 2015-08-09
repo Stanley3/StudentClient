@@ -16,7 +16,7 @@ import com.chejiawang.android.studentclient.utils.ListEntity;
 import com.chejiawang.android.studentclient.utils.StringUtils;
 
 public class CoatList extends Entity implements ListEntity {
-	public static String TAG = "HaveOrderList";
+	public static String TAG = "CoatList";
 	private List<DisplayStudentDepositReocrd> recordList = new ArrayList<DisplayStudentDepositReocrd>();
 
 	public List<DisplayStudentDepositReocrd> getRecordList() {
@@ -36,17 +36,15 @@ public class CoatList extends Entity implements ListEntity {
 		}
 		CoatList list = new CoatList();
 		try {
-			JSONArray jsonArry = new JSONArray(result);
+			JSONObject jsonObject = new JSONObject(result);
+			JSONArray jsonArry = jsonObject.getJSONArray("data");
 			for (int i = 0; i < jsonArry.length(); i++) {
 				JSONObject recordJson = jsonArry.getJSONObject(i);
 				DisplayStudentDepositReocrd record = new DisplayStudentDepositReocrd();
-//				record.setStudent_name(recordJson.getString("student_name"));
-//				record.setOrder_time(recordJson.getString("order_time"));
-//				record.setCourse_status(recordJson.getString("course_status"));
-//				record.setTraining_start_time(recordJson.getString("training_start_time"));
-//				record.setTraining_end_time(recordJson.getString("training_end_time"));
-//				record.setStatus(recordJson.getString("status"));
-				list.getRecordList().add(record);
+				record.setDeposit_date(recordJson.getString("deposit_date"));
+				record.setDeposit_address(recordJson.getString("deposit_address"));
+				record.setDeposit_type(recordJson.getInt("deposit_type"));
+				list.recordList.add(record);
 			}
 
 		} catch (JSONException e) {

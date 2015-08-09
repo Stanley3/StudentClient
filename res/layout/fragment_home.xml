@@ -30,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title"
         android:layout_margin="0dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:visibility="gone" >
 
         <Button
             android:id="@+id/bt_map"
@@ -49,28 +50,30 @@
             android:layout_weight="1"
             android:background="@drawable/map_selector"
             android:text="@string/distance_scan"
-           	android:textColor="@color/bt_background_unselected"
+            android:textColor="@color/bt_background_unselected"
             android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_line"
         android:layout_width="match_parent"
-        android:layout_below="@id/ll_mid_btn"
         android:layout_height="2dp"
+        android:layout_below="@id/ll_mid_btn"
         android:background="@color/bt_background_unselected"
         android:orientation="horizontal"
+        android:visibility="gone"
         android:weightSum="2" >
+
         <ImageView
             android:id="@+id/iv_line"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:background="@color/bt_background_selected"
-            android:scaleType="matrix"
-            android:contentDescription="@string/underLine" />
+            android:contentDescription="@string/underLine"
+            android:scaleType="matrix" />
     </LinearLayout>
-    
+
     <com.chejiawang.android.studentclient.home.MapViewPager
         android:id="@+id/vp_select"
         android:layout_width="fill_parent"

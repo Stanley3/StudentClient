@@ -31,7 +31,7 @@ public class OrderInFragment1 extends BaseRecycleViewFragment {
 	
 	public void initRequestInfo() {
 		//此处需要初始化请求参数信息
-		this.student_id = ((StudentLoginSuccessInfo)AppContext.getInfo("coach_info")).getStudent_id();
+		this.student_id = ((StudentLoginSuccessInfo)AppContext.getInfo("student_info")).getStudent_id();
 		this.sort = "order_time";
 		this.order = "desc";
 		this.option = 1;

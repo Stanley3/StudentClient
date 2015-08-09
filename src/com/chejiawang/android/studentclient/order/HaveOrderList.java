@@ -37,16 +37,17 @@ public class HaveOrderList extends Entity implements ListEntity {
 		}
 		HaveOrderList list = new HaveOrderList();
 		try {
-			JSONArray jsonArry = new JSONArray(result);
+			JSONObject jsonObject = new JSONObject(result);
+			JSONArray jsonArry = jsonObject.getJSONArray("data");
 			for (int i = 0; i < jsonArry.length(); i++) {
 				JSONObject recordJson = jsonArry.getJSONObject(i);
 				MyOrderRecord record = new MyOrderRecord();
-//				record.setStudent_name(recordJson.getString("student_name"));
-//				record.setOrder_time(recordJson.getString("order_time"));
-//				record.setCourse_status(recordJson.getString("course_status"));
-//				record.setTraining_start_time(recordJson.getString("training_start_time"));
-//				record.setTraining_end_time(recordJson.getString("training_end_time"));
-//				record.setStatus(recordJson.getString("status"));
+				record.setCoach_id(recordJson.getInt("coach_id"));
+				record.setCoach_name(recordJson.getString("coach_name"));
+
+				record.setTraining_start_time(recordJson.getString("training_start_time"));
+				record.setTraining_end_time(recordJson.getString("training_end_time"));
+				record.setOrder_status(recordJson.getInt("order_status"));
 				list.getHaveOrderList().add(record);
 			}
 

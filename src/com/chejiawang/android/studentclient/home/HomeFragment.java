@@ -141,17 +141,19 @@ public class HomeFragment extends Fragment implements OnClickListener {
 		mPager.setAdapter(new HomeFragmentPagerAdapter(
 				getChildFragmentManager(), fragmentsList));
 		mPager.setOnPageChangeListener(new MyOnPageChangeListener());
-		mPager.setCurrentItem(0);
+//		mPager.setCurrentItem(0);
+		mPager.setCurrentItem(1);
 	}
 
 	/**
 	 * 初始化Fragment
 	 */
 	public void initFragment() {
+		// 去掉了地图页面
 		fragmentsList = new ArrayList<Fragment>();
-		home1 = new HomeInFragment1();
+//		home1 = new HomeInFragment1();
 		home2 = new HomeInFragment2();
-		fragmentsList.add(home1);
+//		fragmentsList.add(home1);
 		fragmentsList.add(home2);
 	}
 
@@ -179,9 +181,9 @@ public class HomeFragment extends Fragment implements OnClickListener {
 		case R.id.bt_distance:
 			mPager.setCurrentItem(1);
 			break;
-		case R.id.bt_map:
-			mPager.setCurrentItem(0);
-			break;
+//		case R.id.bt_map:
+//			mPager.setCurrentItem(0);
+//			break;
 		case R.id.bt_user_info:
 			break;
 

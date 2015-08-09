@@ -49,7 +49,7 @@ public class FinanceFragment extends Fragment implements OnClickListener{
 	 */
 	private ArrayList<Fragment> mArray;
 
-	private Fragment costLog;
+//	private Fragment costLog;
 	
 	private Fragment rechangeLog;
 
@@ -100,9 +100,9 @@ public class FinanceFragment extends Fragment implements OnClickListener{
 	}
 	private void initFragment() {
 		mArray = new ArrayList<Fragment>();
-		costLog = new FragmentInFinance1();
+//		costLog = new FragmentInFinance1();
 		rechangeLog = new FragmentInFinance2();
-		mArray.add(costLog);
+//		mArray.add(costLog);
 		mArray.add(rechangeLog);
 		
 	}
@@ -117,12 +117,12 @@ public class FinanceFragment extends Fragment implements OnClickListener{
 	public void onClick(View v) {
 		int id = v.getId();
 		switch(id){
-		case R.id.bt_cost_log:
-			vp_finance.setCurrentItem(0);
-			break;
-		case R.id.bt_rechange_log:
-			vp_finance.setCurrentItem(1);
-			break;
+//		case R.id.bt_cost_log:
+//			vp_finance.setCurrentItem(0);
+//			break;
+//		case R.id.bt_rechange_log:
+//			vp_finance.setCurrentItem(1);
+//			break;
 		case R.id.bt_user_info:
 			//UIHelper.startActivityUtil(this.getActivity(), UserInfoActivity.class);
 			break;

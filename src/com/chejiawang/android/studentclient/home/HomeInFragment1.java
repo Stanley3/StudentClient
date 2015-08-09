@@ -182,7 +182,7 @@ public class HomeInFragment1 extends Fragment{
 //		locationClient.stop();
 //		baiduMap.setMyLocationEnabled(false);
 //		// TODO Auto-generated method stub
-//		super.onDestroy();
+		super.onDestroy();
 //		mapView.onDestroy();
 //		mapView = null;
 	}
